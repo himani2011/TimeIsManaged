@@ -84,11 +84,11 @@ const AddEmp=()=> {
       <label for="hrs">To</label>
     </div>
   </div>
-  <div className="form-row d-flex mb-3">
-  <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
+  <div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
+  <div className="form-group" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Sunday</label>
     </div>
-    <div className="form-group flex-fill" style={{marginRight:"10px"}}>
+    <div className="form-group" style={{marginRight:"10px"}}>
   <TimePicker
           start="00:00"
           end="24:00"
@@ -97,7 +97,7 @@ const AddEmp=()=> {
           value={time}
   />
 </div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
+<div className="form-group" style={{marginRight:"10px"}}>
   <TimePicker
           start="00:00"
           end="24:00"
@@ -106,7 +106,7 @@ const AddEmp=()=> {
           value={time}
   />
 </div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
+<div className="form-group" style={{marginRight:"10px"}}>
   <TimePicker
           start="00:00"
           end="24:00"
@@ -115,7 +115,7 @@ const AddEmp=()=> {
           value={time}
   />
 </div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
+<div className="form-group" style={{marginRight:"10px"}}>
   <TimePicker
           start="00:00"
           end="24:00"
@@ -126,7 +126,7 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-flex mb-3">
+<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
   <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Monday</label>
     </div>
@@ -168,7 +168,7 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-flex mb-3">
+<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
   <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Tuesday</label>
     </div>
@@ -210,11 +210,11 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-flex mb-3">
+<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
   <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Wednesday</label>
-    </div>
-    <div className="form-group flex-fill" style={{marginRight:"10px"}}>
+  </div>
+  <div className="form-group flex-fill" style={{marginRight:"10px"}}>
   <TimePicker
           start="00:00"
           end="24:00"
@@ -252,7 +252,7 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-flex mb-3">
+<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
   <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Thursday</label>
     </div>
@@ -294,7 +294,7 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-flex mb-3">
+<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
   <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Friday</label>
     </div>
@@ -336,7 +336,7 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-flex mb-3">
+<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
   <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Saturday</label>
     </div>
@@ -382,50 +382,8 @@ const AddEmp=()=> {
   <div className="form-group">
  
   </div>
-  <button type="submit" className="btn btn-primary">Sign in</button>
+  <center><button type="submit" className="btn btn-primary col-md-6" style={{margin:"20px",padding:"15px"}}>Add Employee</button></center>
 </form>
-      {/* <form style={{marginTop:"80px",marginLeft:"30px"}}>
-              <div className="mb-3">
-                  <label htmlFor="name" className="form-label">Full name</label>
-                  <input type="text" className="form-control w-25" id="name"/>
-              </div>
-              <div className="mb-3">
-                  <label htmlFor="email" className="form-label">Email address</label>
-                  <input type="email" className="form-control w-25" id="email"/>
-              </div>
-              <div className="mb-3">
-                  <label htmlFor="dob" className="form-label">Date of birth</label>
-                  <input type="date" className="form-control w-25" id="dob"/>
-              </div>
-              <div className="mb-3">
-                  <label htmlFor="address" className="form-label">Address</label>
-                  <input type="text" className="form-control w-25" id="address"/>
-              </div>
-              <div className="mb-3">
-                  <label htmlFor="pno" className="form-label">Phone no</label>
-                  <input type="tel" className="form-control w-25" id="pno"/>
-              </div>
-              <div className="mb-3">
-                  <label htmlFor="apno" className="form-label">Alternate phone no</label>
-                  <input type="tel" className="form-control w-25" id="apno"/>
-              </div>
-              <div className="mb-3">
-                  <label htmlFor="pos" className="form-label">Position</label>
-                  <input type="text" className="form-control w-25" id="pos"/>
-              </div>
-              <div className="mb-3 form-check-inline d-flex align-items-center">
-                <input type="checkbox" className="form-check-input" id="pt" style={{marginRight:"10px"}}/>
-                <label className="form-check-label mr-100" for="pt">Part time</label>
-
-                <input type="checkbox" className="form-check-input" id="ft" style={{marginLeft:"20px",marginRight:"10px"}}/>
-                <label className="form-check-label" for="ft">Full time</label>
-              </div>
-              <div className="mb-3">
-                  <label htmlFor="avgHrs" className="form-label">Average hours range</label>
-                  <input type="text" className="form-control w-25" id="avgHrs"/>
-              </div>
-              <button type="submit" className="btn btn-primary">Submit</button>
-          </form> */}
     </div>
   )
 }
