@@ -31,6 +31,18 @@ const Navbar = (props)=> {
           <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
         </li>
         <li className="nav-item">
+          <NavLink className="nav-link" aria-current="page" to="/addEmp">Add Employee</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" aria-current="page" to="/editEmp">Edit Employee</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" aria-current="page" to="/changeAvail">Change Availability</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" aria-current="page" to="/viewSchedule">View Schedule</NavLink>
+        </li>
+        <li className="nav-item">
           <NavLink className="nav-link" aria-current="page" to="/">Logout</NavLink>
         </li>
         </>
