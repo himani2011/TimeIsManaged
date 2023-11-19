@@ -1,0 +1,363 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Highlight Example</title>
+  <style>
+    button {
+      margin: 5px;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="btn1" onclick="handleButtonClick('btn1')">Button 1</button>
+  <button id="btn2" onclick="handleButtonClick('btn2')">Button 2</button>
+  <button id="btn3" onclick="handleButtonClick('btn3')">Button 3</button>
+  <button id="btn4" onclick="handleButtonClick('btn4')">Button 4</button>
+  <button id="btn5" onclick="handleButtonClick('btn5')">Button 5</button>
+  <button id="btn6" onclick="handleButtonClick('btn6')">Button 6</button>
+
+  <script>
+    let firstClickedButton = null;
+
+    function handleButtonClick(buttonId) {
+      const button = document.getElementById(buttonId);
+
+      if (firstClickedButton === null) {
+        // First button click
+        firstClickedButton = button;
+      } else {
+        // Second button click
+        const buttons = document.querySelectorAll('button');
+        const startIndex = Array.from(buttons).indexOf(firstClickedButton); //null
+        const endIndex = Array.from(buttons).indexOf(button);
+        if(startIndex<endIndex){
+          for (let i = Math.min(startIndex, endIndex); i <= Math.max(startIndex, endIndex); i++) {
+          buttons[i].classList.add('highlight');
+        }
+        }
+        else{
+          alert("Add a valid time")
+        }
+         // Reset for the next pair of clicks
+         firstClickedButton = null;
+      }
+    }
+  </script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Highlight with Dynamic Cancel Options</title>
+  <style>
+    button {
+      margin: 5px;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+
+    .cancelButton {
+      margin-top: 10px;
+      cursor: pointer;
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="btn1" onclick="handleButtonClick('btn1')">Button 1</button>
+  <button id="btn2" onclick="handleButtonClick('btn2')">Button 2</button>
+  <button id="btn3" onclick="handleButtonClick('btn3')">Button 3</button>
+  <button id="btn4" onclick="handleButtonClick('btn4')">Button 4</button>
+  <button id="btn5" onclick="handleButtonClick('btn5')">Button 5</button>
+  <button id="btn6" onclick="handleButtonClick('btn6')">Button 6</button>
+
+  <div id="cancelButtonsContainer"></div>
+
+  <script>
+    let firstClickedButton = null;
+    let cancelIndex = 1;
+
+    function handleButtonClick(buttonId) {
+      const button = document.getElementById(buttonId);
+
+      if (!firstClickedButton) {
+        // First button click
+        firstClickedButton = button;
+        button.classList.add('highlight');
+      } else {
+        // Second button click
+        const buttons = document.querySelectorAll('button');
+        const startIndex = Array.from(buttons).indexOf(firstClickedButton);
+        const endIndex = Array.from(buttons).indexOf(button);
+
+        for (let i = Math.min(startIndex, endIndex); i <= Math.max(startIndex, endIndex); i++) {
+          buttons[i].classList.add('highlight');
+        }
+
+        // Create a cancel button for this selection
+        createCancelButton();
+
+        // Reset for the next pair of clicks
+        firstClickedButton = null;
+      }
+    }
+
+    function createCancelButton() {
+      const cancelButtonContainer = document.getElementById('cancelButtonsContainer');
+      const cancelButton = document.createElement('div');
+      cancelButton.textContent = `Cancel Selection ${cancelIndex}`;
+      cancelButton.classList.add('cancelButton');
+      cancelButton.onclick = function () {
+        cancelSelection(cancelIndex);
+      };
+
+      cancelButtonContainer.appendChild(cancelButton);
+
+      // Increment cancel index for the next cancel button
+      cancelIndex++;
+    }
+
+    function cancelSelection(index) {
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach(button => button.classList.remove('highlight'));
+
+      // Hide the corresponding cancel button
+      const cancelButton = document.querySelector(`.cancelButton:nth-child(${index})`);
+      cancelButton.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Highlight with Dynamic Cancel Options</title>
+  <style>
+    button {
+      margin: 5px;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+
+    .cancelButton {
+      margin-top: 10px;
+      cursor: pointer;
+      color: red;
+      border-color: black;
+      border: 5px solid;
+      width: 250px;
+    }
+    .cancelImg {
+      margin-top: 15px;
+      cursor: pointer;
+      display: flex;  
+    }
+    .cancelText{
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="btn1" onclick="handleButtonClick('btn1')">Button 1</button>
+  <button id="btn2" onclick="handleButtonClick('btn2')">Button 2</button>
+  <button id="btn3" onclick="handleButtonClick('btn3')">Button 3</button>
+  <button id="btn4" onclick="handleButtonClick('btn4')">Button 4</button>
+  <button id="btn5" onclick="handleButtonClick('btn5')">Button 5</button>
+  <button id="btn6" onclick="handleButtonClick('btn6')">Button 6</button>
+  <button id="btn7" onclick="handleButtonClick('btn7')">Button 7</button>
+  <button id="btn8" onclick="handleButtonClick('btn8')">Button 8</button>
+  <button id="btn9" onclick="handleButtonClick('btn9')">Button 9</button>
+  <button id="btn10" onclick="handleButtonClick('btn10')">Button 10</button>
+  <button id="btn11" onclick="handleButtonClick('btn11')">Button 11</button>
+  <button id="btn12" onclick="handleButtonClick('btn12')">Button 12</button>
+
+  <div id="cancelButtonsContainer">
+  </div>
+  <!-- <div id="cancelImageContainer">
+  </div>
+   -->
+  <script>
+    let selectedButtons = [];
+    let cancelIndex = 1;
+
+    const cancelColors = {
+    0: 'yellow',
+    1: 'blue',
+    2: 'green',
+    3: 'black',
+    4: 'red',
+    5: 'purple',
+    6: 'orange',
+    7: 'brown',
+    8: 'pink'
+    // Add more colors as needed
+  };
+
+    function handleButtonClick(buttonId) {
+      const button = document.getElementById(buttonId);
+      const currentIndex = cancelIndex;
+
+      if (selectedButtons.length === 0 || selectedButtons.length === 2) {
+        // Start a new selection
+        selectedButtons = [button]; //creates a new array that has only one element 'button'
+        
+        // const highlightColor = getHighlightColor(); // Get the color for this selection
+        // button.style.backgroundColor = highlightColor;
+
+
+
+        const cancelColor = cancelColors[currentIndex] || 'gray'; // Default to gray if color is not defined
+        button.style.backgroundColor = cancelColor;
+    
+        button.classList.add('highlight');
+      } else {
+        // Continue the existing selection
+        const buttons = document.querySelectorAll('button');
+        const startIndex = Array.from(buttons).indexOf(selectedButtons[0]);
+        const endIndex = Array.from(buttons).indexOf(button);
+
+        for (let i = Math.min(startIndex, endIndex); i <= Math.max(startIndex, endIndex); i++) {
+          //buttons[i].classList.add('highlight');
+          //const highlightColor = getHighlightColor(); // Get the color for this selection
+          //buttons[i].style.backgroundColor = highlightColor;
+          const cancelColor = cancelColors[currentIndex] || 'gray'; // Default to gray if color is not defined
+          buttons[i].style.backgroundColor = cancelColor;
+        }
+
+        // Complete the selection
+        selectedButtons.push(button);
+        createCancelButton(selectedButtons);
+        selectedButtons = [];
+      }
+    }
+
+    function createCancelButton(selectedButtons) {
+
+      console.log("Selected buttons :", selectedButtons[0]);
+
+      const cancelButtonContainer = document.getElementById('cancelButtonsContainer');
+      //const cancelImgContainer = document.getElementById('cancelImageContainer');
+
+  
+
+      const currentIndex = cancelIndex;
+      //For the cancelIndex problem
+
+      const cancelButton = document.createElement('div');
+      cancelButton.textContent = `Cancel Selection ${cancelIndex}: from button ${selectedButtons[0].textContent} to ${selectedButtons[1].textContent}`;
+      cancelButton.classList.add('cancelButton');
+
+    // const highlightColor = cancelColors(); // Get the color for this selection
+    // cancelButton.style.backgroundColor = highlightColor;
+
+      const cancelColor = cancelColors[currentIndex] || 'gray'; // Default to gray if color is not defined
+      cancelButton.style.backgroundColor = cancelColor;
+
+      cancelButton.onclick = async function () {
+  try {
+    await cancelSelection(currentIndex, selectedButtons);
+    console.log("Cancel index in function: ",cancelIndex)
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
+      // let img = document.createElement('img');
+      // let para=document.createElement('p');
+      // img.src = 'close2.png';
+      // img.classList.add('cancelImg');
+      // para.textContent=`Cancel Selection ${cancelIndex}`;
+      // para.classList.add('cancelText');
+
+//       img.onclick = async function () {
+//   try {
+//     await cancelSelection(currentIndex, selectedButtons);
+//     console.log("Cancel index in function: ",cancelIndex)
+//   } catch (error) {
+//     console.error('Error:', error);
+//   }
+// };
+    
+     
+
+      cancelButtonContainer.appendChild(cancelButton);
+      //cancelImgContainer.appendChild(img);
+      //cancelImgContainer.appendChild(para);
+
+      // Increment cancel index for the next cancel button
+      // console.log("previous index: ",cancelIndex);
+      cancelIndex++;
+      console.log("increased index: ",cancelIndex);
+    }
+
+    //NEED TO MAKE ANOTHER CSS CLASS FOR PARA SO THAT I CAN ADD THAT CLASS TO IT
+
+
+    function cancelSelection(index,selectedButtons) {
+
+        const buttons = document.querySelectorAll('button');
+        const startIndex = Array.from(buttons).indexOf(selectedButtons[0]);
+        const endIndex = Array.from(buttons).indexOf(selectedButtons[1]);
+
+        for (let i = Math.min(startIndex, endIndex); i <= Math.max(startIndex, endIndex); i++) {
+          //buttons[i].classList.remove('highlight');
+          buttons[i].style.backgroundColor = 'white';
+        }
+
+      // Hide the corresponding cancel button
+
+      const cancelButton = document.querySelector(`.cancelButton:nth-child(${index})`);
+      //const cancelImg = document.querySelector(`.cancelImg:nth-child(${index})`);
+      
+      if (cancelButton) {
+    cancelButton.style.display = 'none';
+  } else {
+    console.error(`Cancel Image with index ${index} not found.`);
+  }
+  
+  // if (cancelImg) {
+  //   cancelImg.style.opacity = 0;
+  // } else {
+  //   console.error(`Cancel Image with index ${index} not found.`);
+  // }
+
+    }
+  </script>
+
+</body>
+</html>
