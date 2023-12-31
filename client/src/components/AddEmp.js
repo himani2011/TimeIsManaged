@@ -77,18 +77,13 @@ const AddEmp=()=> {
     <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
       <label htmlFor="hrs" className="mb-1">To</label>
     </div>
-    <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
-      <label htmlFor="hrs" className="mb-1">From</label>
-    </div>
-    <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
-      <label htmlFor="hrs" className="mb-1">To</label>
-    </div>
   </div>
-  <div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
-  <div className="form-group" style={{marginLeft:"20px"}}>
+  <div className="d-flex mb-3" style={{alignItems:"center"}}>
+  {/* form-row d-grid mb-3  style={{gridTemplateColumns:'repeat(3,1fr)',gridGap:'-10px'}} */}
+  <div className="form-group col-md-3" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Sunday</label>
     </div>
-    <div className="form-group" style={{marginRight:"10px"}}>
+    <div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -97,25 +92,7 @@ const AddEmp=()=> {
           value={time}
   />
 </div>
-<div className="form-group" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group" style={{marginRight:"10px"}}>
+<div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -126,11 +103,12 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
-  <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
+<div className="d-flex mb-3" style={{alignItems:"center"}}>
+  {/* form-row d-grid mb-3  style={{gridTemplateColumns:'repeat(3,1fr)',gridGap:'-10px'}} */}
+  <div className="form-group col-md-3" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Monday</label>
     </div>
-    <div className="form-group flex-fill" style={{marginRight:"10px"}}>
+    <div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -139,25 +117,7 @@ const AddEmp=()=> {
           value={time}
   />
 </div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
+<div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -168,11 +128,12 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
-  <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
+<div className="d-flex mb-3" style={{alignItems:"center"}}>
+  {/* form-row d-grid mb-3  style={{gridTemplateColumns:'repeat(3,1fr)',gridGap:'-10px'}} */}
+  <div className="form-group col-md-3" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Tuesday</label>
     </div>
-    <div className="form-group flex-fill" style={{marginRight:"10px"}}>
+    <div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -181,25 +142,7 @@ const AddEmp=()=> {
           value={time}
   />
 </div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
+<div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -210,11 +153,12 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
-  <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
+<div className="d-flex mb-3" style={{alignItems:"center"}}>
+  {/* form-row d-grid mb-3  style={{gridTemplateColumns:'repeat(3,1fr)',gridGap:'-10px'}} */}
+  <div className="form-group col-md-3" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Wednesday</label>
-  </div>
-  <div className="form-group flex-fill" style={{marginRight:"10px"}}>
+    </div>
+    <div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -223,25 +167,7 @@ const AddEmp=()=> {
           value={time}
   />
 </div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
+<div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -252,11 +178,12 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
-  <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
+<div className="d-flex mb-3" style={{alignItems:"center"}}>
+  {/* form-row d-grid mb-3  style={{gridTemplateColumns:'repeat(3,1fr)',gridGap:'-10px'}} */}
+  <div className="form-group col-md-3" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Thursday</label>
     </div>
-    <div className="form-group flex-fill" style={{marginRight:"10px"}}>
+    <div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -265,25 +192,7 @@ const AddEmp=()=> {
           value={time}
   />
 </div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
+<div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -294,11 +203,12 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
-  <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
+<div className="d-flex mb-3" style={{alignItems:"center"}}>
+  {/* form-row d-grid mb-3  style={{gridTemplateColumns:'repeat(3,1fr)',gridGap:'-10px'}} */}
+  <div className="form-group col-md-3" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Friday</label>
     </div>
-    <div className="form-group flex-fill" style={{marginRight:"10px"}}>
+    <div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -307,25 +217,7 @@ const AddEmp=()=> {
           value={time}
   />
 </div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
+<div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -336,11 +228,12 @@ const AddEmp=()=> {
 </div>
 </div>
 
-<div className="form-row d-grid mb-3" style={{gridTemplateColumns:'repeat(5,1fr)',gridGap:'-10px'}}>
-  <div className="form-group flex-fill" style={{marginLeft:"20px"}}>
+<div className="d-flex mb-3" style={{alignItems:"center"}}>
+  {/* form-row d-grid mb-3  style={{gridTemplateColumns:'repeat(3,1fr)',gridGap:'-10px'}} */}
+  <div className="form-group col-md-3" style={{marginLeft:"20px"}}>
     <label htmlFor="address" className="form-label">Saturday</label>
     </div>
-    <div className="form-group flex-fill" style={{marginRight:"10px"}}>
+    <div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -349,25 +242,7 @@ const AddEmp=()=> {
           value={time}
   />
 </div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
-  <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
-          start="00:00"
-          end="24:00"
-          step={30}
-          onChange={handleTime}
-          value={time}
-  />
-</div>
-<div className="form-group flex-fill" style={{marginRight:"10px"}}>
+<div className="form-group col-md-3" style={{marginRight:"10px"}}>
   <TimePicker style={{borderColor:"#36454F",borderWidth:"1.5px"}}
           start="00:00"
           end="24:00"
@@ -378,7 +253,10 @@ const AddEmp=()=> {
 </div>
 </div>
 
- 
+<div className="d-flex mb-3" style={{alignItems:"center"}}>
+  <label htmlFor="info" className="form-group col-md-3" style={{marginLeft:"20px",marginTop:"15px",marginRight:"5px"}}>Additional Availability Information</label>
+  <textarea className="form-group col-md-6" id="info" rows="3" style={{borderColor:"#36454F",borderWidth:"1.5px"}}></textarea>
+  </div>
   
   <center><button type="submit" className="btn btn-dark col-md-6" style={{margin:"20px",padding:"15px"}}>Add Employee</button></center>
 </form>

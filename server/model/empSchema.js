@@ -22,8 +22,11 @@ const empschema=new mongoose.Schema({
     position:{
         type:String
     },
-    avgdays:{
+    avgHrs:{
         type:Number
+    },
+    jobType:{
+        type:String
     },
     sunFrom:{
         type:Date
@@ -66,6 +69,9 @@ const empschema=new mongoose.Schema({
     },
     satTo:{
         type:Date
+    },
+    additionalInfo:{
+        type:String
     }
 })
 

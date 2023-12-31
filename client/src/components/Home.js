@@ -6,7 +6,8 @@ const Home=()=> {
     const navigateTo=useNavigate();
   return (
     <div>
-        <div className='d-flex justify-content-between' style={{margin:"200px",cursor:"pointer"}}>
+        <div className='d-flex' style={{flexDirection:"column"}}>
+        <div className='d-flex justify-content-between' style={{margin:"200px 200px 10px 200px",cursor:"pointer"}}>
           <div className="card" style={{ width: "18rem", textAlign:"center", margin:"10px" }} onClick={()=>navigateTo('/addEmp')}>
               <div className="card-body">
                   <h5 className="card-title">Add Employee</h5>
@@ -28,6 +29,14 @@ const Home=()=> {
               </div>
           </div>
           </div>
+        <div className='d-flex justify-content-center' style={{cursor:"pointer"}}>
+        <div className="card" style={{ width: "25rem", textAlign:"center", margin:"0px 200px 0px 200px",backgroundColor:"gray"}} onClick={()=>navigateTo('/createSchedule')}>
+              <div className="card-body">
+                  <h5 className="card-title">Create Schedule</h5>
+              </div>
+          </div>
+        </div>
+        </div>
     </div>
   )
 }

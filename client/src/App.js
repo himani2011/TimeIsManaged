@@ -8,15 +8,20 @@ import Login from '../src/components/Login';
 import ChangeAvail from '../src/components/ChangeAvail';
 import EditEmp from '../src/components/EditEmp';
 import ViewSchedule from '../src/components/ViewSchedule';
-
+import Tryplease from '../src/components/Tryplease'
+import Timeline from './components/Timeline';
+import CreateSchedule from './components/CreateSchedule';
 
 function App() {
 
   const [auth,setAuth] = useState()
+  const startTime = 10;
+  const endTime = 14;
 
   useEffect(()=>{
     setAuth(localStorage.getItem("TOKEN"))
   },[])
+
   return (
     <div>
       <Navbar auth={auth}/>
@@ -28,6 +33,9 @@ function App() {
         <Route path='/changeAvail' element={<ChangeAvail/>}></Route>
         <Route path='/editEmp' element={<EditEmp/>}></Route>
         <Route path='/viewSchedule' element={<ViewSchedule/>}></Route>
+        <Route path='/vv' element={<Tryplease/>}></Route>
+        <Route path='/timeline' element={<Timeline startTime={startTime} endTime={endTime}/>}></Route>
+        <Route path='/createSchedule' element={<CreateSchedule/>}></Route>
 
 
       </Routes>
